@@ -11,6 +11,6 @@
 
 ## Trying some commands
 - Try out some commands, such as:
-* cd /
-* ls -a
+    - cd /
+    - ls -a
 ![Image](commands.png)
