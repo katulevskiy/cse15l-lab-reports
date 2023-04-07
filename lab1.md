@@ -13,3 +13,4 @@
 - Try out some commands, such as:
 * cd /
 * ls -a
+![Image](commands.png)
