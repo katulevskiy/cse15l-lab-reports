@@ -10,6 +10,8 @@
 ## Remotely connecting
 - Reset your password via https://sdacs.ucsd.edu/~icc/index.php
 - Use your terminal to establish ssh connection ([TUTORIAL](https://youtu.be/in1QMOYk6Io))
+- Command: ```ssh username@ieng6.ucsd.edu``` (input your course-specific username)
+- Then input your password (it will not show symbols you are typing, this is an intended behavior)
 
 ![Image](pass-reset.png)
 
