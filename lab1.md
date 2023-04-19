@@ -15,8 +15,8 @@
 
 ## Trying some commands
 - Try out some commands, such as:
-    - cd /
-    - ls -a
+    - cd / (changes directory to root)
+    - ls -a (outputs list of all files in the directory, including hidden files)
 
 
 ![Image](commands.png)
