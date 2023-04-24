@@ -71,8 +71,10 @@ class StringServer {
 The effect of ```add-message``` in query string is to concatenate a new line (\n) and the string after = to the running string, and then respond with the entire string so far.
 
 Query should look like this:
+
 ```https://server.domain:port/add-message?s=<string>```
 
+I already ran query ```/add-message?s=Hello```.\
 Here are examples of ```add-message``` query usage:
 
 ![Image](String-server-2.png)
