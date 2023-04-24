@@ -1,6 +1,8 @@
 # Lab report 2 - Daniil Katulevskiy A17481234
 
-Here is my code for StringServer.java:
+# Part 1
+
+## Code for StringServer.java
 
 ```java
 import java.io.IOException;
@@ -107,7 +109,6 @@ How do the values of any relevant fields of the class change from this specific 
 
 - words ArrayList is changed
   - String parsed from current query is added to words ArrayList
-\
 
 ### Second query - ```/add-message?Some other text in query.```
 
@@ -138,4 +139,78 @@ How do the values of any relevant fields of the class change from this specific 
 
 - words ArrayList is changed
   - String parsed from current query is added to words ArrayList
-\
+
+# Part 2
+
+## Program conatining bugs
+
+I chose LinkedListExample.java program to show failure-incucing inputs on it.
+
+I wrote a JUnit test that makes the program run infinitely, creating new objects and thus, memory-leaking.
+
+### JUnit test
+
+![Image](append-test.png)
+
+### Program initial code
+
+![Image](append-code.png)
+
+Some inputs do not induce failures.  
+For example, if we only append 2 objects to the list, the test passes.
+
+![Image](append-pass-test.png)
+
+Symptom is that test never ends running, and neither fails nor passes.  
+Computer also gives warning of all availble RAM taken by Java after some time of program running, which is also a symptom.
+
+### Program with bug before fix
+
+```java
+public void append(int value) {
+    if(this.root == null) {
+        this.root = new Node(value, null);
+        return;
+    }
+    // If it's just one element, add if after that one
+    Node n = this.root;
+    if(n.next == null) {
+        n.next = new Node(value, null);
+        return;
+    }
+        // Otherwise, loop until the end and add at the end with a null
+    while(n.next != null) {
+        n = n.next;
+        n.next = new Node(value, null);
+    }
+}
+```
+
+### Program without bug after fix
+
+```java
+public void append(int value) {
+    if(this.root == null) {
+        this.root = new Node(value, null);
+        return;
+    }
+    // If it's just one element, add if after that one
+    Node n = this.root;
+    if(n.next == null) {
+        n.next = new Node(value, null);
+        return;
+    }
+        // Otherwise, loop until the end and add at the end with a null
+    while(n.next != null) {
+        n = n.next;
+    }
+    n.next = new Node(value, null); // [FIX] This line should be outside the loop.
+}
+```
+
+Fix is simple. We just have to take ```n.next = new Node(value, null);``` out of the loop.
+This line was creating new Nodes infinitely, and the program couldn't exit while loop, because there will always be next node, as it is created in the same loop.
+
+# Part 3
+
+In lab 3 I learned how to efficiently test the program for different types of bugs and exceptions. Also it was a good practice to catch bugs before execution of the program and fixing them on the go.
