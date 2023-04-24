@@ -74,9 +74,11 @@ The effect of ```add-message``` in query string is to concatenate a new line (\n
 
 Query should look like this:
 
-```https://server.domain:port/add-message?s=<string>```
+```html
+https://server.domain:port/add-message?s=<string>
+```
 
-I already ran query ```/add-message?s=Hello```.\
+I already ran query ```/add-message?s=Hello```.
 
 ## Examples of ```add-message``` query usage
 
