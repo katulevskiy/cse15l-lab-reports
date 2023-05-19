@@ -11,7 +11,7 @@
 8. Run the tests, demonstrating that they now succeed
 9. Commit and push the resulting change to your Github account (you can pick any commit message!)
 
-### I will show my actions for steps 4-9.
+## I will show my actions for steps 4-9.
 
 1. Open Github and copy the SSH clone link
 2. Open terminal
