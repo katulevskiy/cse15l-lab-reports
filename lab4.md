@@ -13,40 +13,40 @@
 
 ## I will show my actions for steps 4-9.
 
-1. Open Github and copy the SSH clone link
-2. Open terminal
-3. Login to ieng6: `ssh cs15lsp__@ieng6.ucsd.edu`
+- Open Github and copy the SSH clone link
+- Open terminal
+- Login to ieng6: `ssh cs15lsp__@ieng6.ucsd.edu`
 
 ![Image](ssh-ieng6.png)
 
-4. Clone git repo: `git clone git@github.com:__username__/lab7_t1.git`
+- Clone git repo: `git clone git@github.com:__username__/lab7_t1.git`
 
 ![Image](git-clone.png)
 
-5. Change directory to the lab: `cd l<tab><enter>`
+- Change directory to the lab: `cd l<tab><enter>`
 
-6. Open file to edit: `nvim L<tab>.java<enter>`
+- Open file to edit: `nvim L<tab>.java<enter>`
 
 ![Image](inside-vim-1.png)
 
-7. Fix the error: `43jf1s2<esc>:wq`
+- Fix the error: `43jf1s2<esc>:wq`
 
         `43j` got to the 43rd line, where the error is located, 
         `f1` found first symbol 1, `s` deleted the 1 and put me into insert mode, 
         `2` wrote down a 2,
         `<esc>` took me to normal mode, `:wq` saved and exited Vim.
 
-8. Test the program: `bash t<tab><enter>`
+- Test the program: `bash t<tab><enter>`
 
 ![Image](test-junit.png)
 
-9. Add file to commit: `git add L<tab>.j<tab><enter>`
+- Add file to commit: `git add L<tab>.j<tab><enter>`
 
-10. Commit the changes: `git commit -m "fix"`
+- Commit the changes: `git commit -m "fix"`
 
 ![Image](git-commit.png)
 
-11. Push the changes: `git push`
+- Push the changes: `git push`
 
 NOTE: `<tab>` and `<enter>` commands autocomplete the words and run the commands correspondingly.
 
