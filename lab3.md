@@ -13,6 +13,8 @@ Explanation:
 Will search for all the files and directories with corresponding path pattern.
 `-ipath` options makes find command treat slashes and dots as path elements instead of regex characters.
 
+Used source [2](https://ss64.com/bash/find.html)
+
 Example 1:  
 
 ```bash
@@ -64,6 +66,8 @@ Explanation:
 Substitute `<dir>` with directory of file, `<words>` with words you want to search files for.
 It will execute grep command on every found file. -H option for grep allows to pring out both, file name and line content that was found. -i option for grep allows for case-insensitive search. Thus, this function will output `filename: line content` for every line that has a matching word.
 
+Used source [3](https://askubuntu.com/questions/924593/run-command-with-args-multiple-time)
+
 Example 1:  
 
 ```bash
@@ -101,6 +105,8 @@ find <dir> -maxdepth <depth>
 
 Explanation:  
 Command will find all files within the given depth `<depth>` in the directory `<dir>`.
+
+Used sources [2](https://ss64.com/bash/find.html), [3](https://askubuntu.com/questions/924593/run-command-with-args-multiple-time)
 
 Example 1:  
 
@@ -146,6 +152,8 @@ find <dir> -mtime <sign><days>
 
 Explanation:  
 This command will find files modified within the provided time period. Directory is defined by `<dir>`, time period is defined by `<sign>` and `<days>`. Sign is either +, -, or nothing. If it is a +, it will search for files modified more than `<days>` ago. If sign is a -, it will search for files modified less than `<days>` ago. If there is no sign, it will search for files modified exactly `<days>` ago.
+
+Used source [1](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/#), [2](https://ss64.com/bash/find.html)
 
 Example 1:  
 
@@ -200,3 +208,9 @@ find ./technical/911report -mtime -12
 ./technical/911report/chapter-10.txt
 ./technical/911report/chapter-11.txt
 ```
+
+## Sources used
+
+1. [`find` command arguments (geeksforgeeks)](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/#)
+2. [Manual page (ss64)](https://ss64.com/bash/find.html)
+3. [Xargs info (askubuntu)](https://askubuntu.com/questions/924593/run-command-with-args-multiple-time)
